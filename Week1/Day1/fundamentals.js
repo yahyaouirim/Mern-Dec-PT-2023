@@ -46,3 +46,44 @@ console.log(x)
 // complex datatypes
 // Arrays
 // Objects
+
+//!---------------- Destructuring --------------------
+
+const person = {
+    firstName: 'Bob',
+    lastName: 'Marley',
+    email: 'bob@marley.com',
+    password: 'sekureP@ssw0rd9',
+    username: 'barley',
+}
+
+// const firstName = person.firstName
+// const lastName = person.lastName
+// console.log(firstName, lastName)
+
+const { firstName: name } = person
+console.log(name)
+
+
+const animals = ['horse🐎', 'dog🐕', 'fish🐟', 'cat🐈', 'bird🐦'];
+
+const [, coolAnimal, , , lastAnimal] = animals
+console.log(coolAnimal, anotherAnimal, lastAnimal)
+
+
+//? --- REST / SPREAD ---
+
+// pass by reference and pass by value
+
+//         0x00141EF
+const a = [10, 20, 30];
+// const b = a
+const b = [...a]
+
+
+b.push(1000)
+
+console.log(a) //?
+console.log(b) //? 
+
+
